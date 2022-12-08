@@ -23,6 +23,12 @@ class PowersController < ApplicationController
             :not_found   
         end 
     end
+
+    private
+
+    def power_params
+        params.permit(:name, :description)
+    end
     
 end
 
